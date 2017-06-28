@@ -1,0 +1,36 @@
+// area de variables
+
+$contenedor-ancho: 100%;
+$contenedor-largo: 80px;
+$contenedor-padding: 20px;
+$color-amarillo: rgb(247, 182, 23);
+$container-margin: 10px;
+$color-negro: rgb(43, 43, 43);
+$margen-abajo: 30px;
+
+$fuente-letra: 13px Arial;
+
+$subtitle-font: 34px Helvetica;
+$color-blanco: white;
+$texto-centro: center;
+
+// para los @media
+
+//funcion para calcular,unquote es una funcion nativa
+@function grid($num){//el 12 es opcional se puede poner mas columnas
+  @return percentage($num / 12);
+}
+//para movil
+@media (min-width: 1024px){
+  .side-menu{
+    //width: grid(3);
+    width: 25%;
+  }
+  .main-content{
+    width: grid(6);
+  }
+  .contenido-instruccion{
+    width: grid(3);
+  }
+
+}
